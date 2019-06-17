@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12306</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<a href="{% url 'movie' %}">
+    <button>豆瓣</button>
+</a>
+<a href="{% url 'jd' %}">
+    <button>jd</button>
+</a>
+<form action="{% url '12306' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="num" placeholder="输入1-8 多个按空格分隔">
+    <button type="submit">提交</button>
+</form>
+</body>
+</html>

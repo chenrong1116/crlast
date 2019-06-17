@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<a href="{% url 'movie' %}"><button>豆瓣</button></a>
+<a href="{% url '12306' %}"><button>12306</button></a>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>price</th>
+    </tr>
+    {% for j in jd %}
+        <tr>
+            <td>{{ j.id }}&nbsp;&nbsp;</td>
+            <td>{{ j.name }}</td>
+            <td>{{ j.price }}</td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
